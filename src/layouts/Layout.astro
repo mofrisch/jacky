@@ -1,4 +1,5 @@
 ---
+import "@styles/base.css";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import HeaderImage from "../components/HeaderImage.astro";
 import Navigation from "../components/Navigation.vue";
@@ -13,11 +14,11 @@ const pathname = Astro.request.url;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de-DE">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -27,7 +28,7 @@ const pathname = Astro.request.url;
       <HeaderImage />
       <Navigation currentPath={pathname} client:load />
     </header>
-    <main class="max-w-screen-xl m-auto">
+    <main class="mx-auto w-full max-w-6xl">
       <slot />
     </main>
     <Footer />

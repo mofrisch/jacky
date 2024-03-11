@@ -1,0 +1,17 @@
+---
+const text =
+  Astro.props.text ||
+  "Diese Seite befindet sich im Aufbau. Schau später nochmal vorbei!";
+---
+
+<div class="flex row">
+  <div>
+    <img src="Baustelle.svg" alt="Under Construction" width="500" />
+  </div>
+
+  <div class="self-center">
+    <p>
+      {text}
+    </p>
+  </div>
+</div>
