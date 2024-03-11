@@ -1,7 +1,8 @@
 ---
 import SpeedInsights from "@vercel/speed-insights/astro";
-import HeaderImage from "../components/headerimage.astro";
-import Navigation from "../components/navigation.vue";
+import HeaderImage from "../components/HeaderImage.astro";
+import Navigation from "../components/Navigation.vue";
+import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
 }
@@ -26,9 +27,10 @@ const pathname = Astro.request.url;
       <HeaderImage />
       <Navigation currentPath={pathname} client:load />
     </header>
-    <main>
+    <main class="max-w-screen-xl m-auto">
       <slot />
     </main>
+    <Footer />
     <SpeedInsights />
   </body>
 </html>
