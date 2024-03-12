@@ -54,6 +54,7 @@ const navigation = [
   },
   { name: 'Über mich', href: '/about-me', current: url_only === 'about-me' ? true : false },
   { name: 'Kontakt', href: '/contact', current: url_only === 'contact' ? true : false },
+  { name: 'Blog', href: '/blog', current: url_only === 'blog' ? true : false },
 ];
 
 </script>

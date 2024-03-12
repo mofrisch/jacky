@@ -1,11 +1,81 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import UnderConstruction from "../components/UnderConstruction.astro";
 ---
 
 <Layout title="Kontakt - Jacqueline Rühl Photography">
   <div class="flex justify-center">
-    <h1 class="text-center text-3xl font-bold py-2 my-4">Kontakt</h1>
+    <h1 class="my-4 py-2 text-center text-3xl font-bold">Kontakt</h1>
   </div>
-  <UnderConstruction />
+
+  <div class="flex min-h-screen items-center bg-gray-50 dark:bg-gray-900">
+    <div class="container mx-auto">
+      <div class="mx-auto my-10 max-w-md rounded-md bg-white p-5 shadow-sm">
+        <div class="text-center">
+          <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">Contact Us</h1>
+          <p class="text-gray-400 dark:text-gray-400">Fill up the form below to send us a message.</p>
+        </div>
+        <div class="m-7">
+          <form action="https://api.web3forms.com/submit" method="POST" id="form">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+            <input type="checkbox" name="botcheck" id="" style="display: none;" />
+            <div class="mb-6">
+              <label for="name" class="mb-2 block text-sm text-gray-600 dark:text-gray-400">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="John Doe"
+                required
+                class="w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-300 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:focus:border-gray-500 dark:focus:ring-gray-900"
+              />
+            </div>
+            <div class="mb-6">
+              <label for="email" class="mb-2 block text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="you@company.com"
+                required
+                class="w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-300 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:focus:border-gray-500 dark:focus:ring-gray-900"
+              />
+            </div>
+            <div class="mb-6">
+              <label for="phone" class="text-sm text-gray-600 dark:text-gray-400">Phone Number</label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="+1 (555) 1234-567"
+                required
+                class="w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-300 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:focus:border-gray-500 dark:focus:ring-gray-900"
+              />
+            </div>
+            <div class="mb-6">
+              <label for="message" class="mb-2 block text-sm text-gray-600 dark:text-gray-400">Your Message</label>
+
+              <textarea
+                rows="5"
+                name="message"
+                id="message"
+                placeholder="Your Message"
+                class="w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-300 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:focus:border-gray-500 dark:focus:ring-gray-900"
+                required></textarea>
+            </div>
+            <div class="mb-6">
+              <button
+                type="submit"
+                class="w-full rounded-md bg-indigo-500 px-3 py-4 text-white focus:bg-indigo-600 focus:outline-none"
+              >
+                Send Message
+              </button>
+            </div>
+            <p class="text-center text-base text-gray-400" id="result"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>

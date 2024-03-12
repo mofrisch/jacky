@@ -4,6 +4,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 import HeaderImage from "../components/HeaderImage.astro";
 import Navigation from "../components/Navigation.vue";
 import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
 }
@@ -22,6 +23,7 @@ const pathname = Astro.request.url;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <header>
